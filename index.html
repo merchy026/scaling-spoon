@@ -1,0 +1,157 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Page Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+  <script src="main.js"></script>
+</head>
+
+<body>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="aset/bootstrap/css/bootstrap.min.css" type="text/css" />
+  <link rel="stylesheet" href="aset/fontawesome/css/all.css" type="text/css" />
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript" src="js/bootstrap.js"></script>
+  </head>
+
+
+  <style>
+      .card
+      {
+          background-color:rgb(134, 131, 185);
+          color:white;
+      }
+      </style>
+
+  <body>
+    <center>
+      <h1 span class="judul">PENENTUAN HASIL BEASISWA</h1>
+    </center><br>
+
+    <div class="card" style="max-width: 20rem;">
+
+    </div><br>
+    <b>
+      <h2 span class="judul">MAMA: Angela Marici
+    </b></h2>
+    <b>
+      <h3 span class="judul">NIM: 201701008
+    </b></h3>
+    <b>
+      <h3 span class="judul">No.Tlp: 081223758765
+    </b></h3>
+    <b>
+      <h3 span class="judul">Email: angelamarici@gmail.com
+    </b></h3>
+    <b>
+      <h3 span class="judul">Alamat: Purwokerto
+    </b></h3>
+    </div>
+    <br>
+
+    <div class="card-group">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Nilai Rata-rata Ujian</h5>
+          <p class="card-text">
+            <div id="t1"></div>
+            <div id="t2"></div>
+            <div id="pr"></div>
+            <h3>
+              <div id="nj"></div>
+            </h3>
+          </p>
+        </div>
+      </div>
+      <div class="card">
+
+        <div class="card-body">
+          <h5 class="card-title">SCORE TOEFL</h5>
+          <p class="card-text">
+            <h3>
+              <div id="toefl1"></div>
+            </h3>
+            <div id="toefl"></div>
+          </p>
+
+
+        </div>
+      </div>
+      <div class="card">
+
+        <div class="card-body">
+          <h5 class="card-title">Status Beasiswa</h5>
+          <p class="card-text">
+            <div id="beasiswa"></div>
+          </p>
+          <h5>
+            <div id="nilai"></div>
+          </h5>
+          <p class="card-text"><small class="text-muted">Last updated 10 mins ago</small></p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+
+      var ujiantertulis1 = document.getElementById("t1");
+      var ujiantertulis2 = document.getElementById("t2");
+      var ujianpraktek = document.getElementById("pr");
+      var hasilujian = document.getElementById("nj");
+
+      var t1 = 60;
+      var t2 = 85;
+      var pr = 90;
+      var nj = (t1 + t2 + pr) / 3;
+
+      ujiantertulis1.innerHTML = "Ujian Tertulis 1 : " + t1;
+      ujiantertulis2.innerHTML = "Ujian Tertulis 2 : " + t2;
+      ujianpraktek.innerHTML = "Ujian Praktek : " + nj;
+      hasilujian.innerHTML = "Nilai Rata-rata Ujian : " + nj;
+
+
+      var nilaitoefl = document.getElementById("toefl");
+      var scoretoefl = document.getElementById("toefl1");
+      var toefl = 540;
+      var toefl1 = 540;
+
+
+      if (toefl >= 500) {
+        nilaitoefl.innerHTML = "Nilai 100";
+      }
+      else if (toefl > 450) {
+        nilaitoefl.innerHTML = "Nilai 85";
+      }
+      else if (toefl < 450) {
+        nilaitoefl.innerHTML = "Nilai 50";
+      }
+
+      scoretoefl.innerHTML = "Score : " + toefl1;
+
+      var statusbeasiswa = document.getElementById("beasiswa");
+
+      var nilaitoefl = 90;
+      var beasiswa = (nj + nilaitoefl) / 2;
+
+      var statusbsw = document.getElementById("nilai");
+
+      var nilai = 90;
+      if (nilai >= 90) {
+        statusbsw.innerHTML = "LULUS";
+      }
+      else if (nilai < 90) {
+        statusbsw.innerHTML = "TIDAK LULUS";
+      }
+      statusbeasiswa.innerHTML = "Nilai : " + beasiswa;
+
+
+    </script>
+  </body>
+
+</html>
